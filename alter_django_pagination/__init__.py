@@ -31,9 +31,9 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 """
-linaro-django-pagination is a set of utilities for creating robust pagination
+alter-django-pagination is a set of utilities for creating robust pagination
 tools throughout a django application.
 """
 
 
-__version__ = (2, 0, 2, "final", 0)
+__version__ = (2, 0, 4, "final", 0)
