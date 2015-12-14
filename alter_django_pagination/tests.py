@@ -1,5 +1,7 @@
 # Copyright (c) 2008, Eric Florenzano
 # Copyright (c) 2010, 2011 Linaro Limited
+# Copyright (c) 2015 Serhii Maltsev
+
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

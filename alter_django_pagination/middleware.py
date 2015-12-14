@@ -1,5 +1,7 @@
 # Copyright (c) 2008, Eric Florenzano
 # Copyright (c) 2010, 2011 Linaro Limited
+# Copyright (c) 2015 Serhii Maltsev
+
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,10 +30,23 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-"""
-linaro-django-pagination is a set of utilities for creating robust pagination
-tools throughout a django application.
-"""
+
+def get_page(self, suffix):
+    """
+    A function which will be monkeypatched onto the request to get the current
+    integer representing the current page.
+    """
+    try:
+        return int(self.GET.get('page%s' % suffix) or self.POST.get('page%s' % suffix))
+    except (KeyError, ValueError, TypeError):
+        return 1
+    return 1
 
 
-__version__ = (2, 0, 2, "final", 0)
+class PaginationMiddleware(object):
+    """
+    Inserts a variable representing the current page onto the request object if
+    it exists in either **GET** or **POST** portions of the request.
+    """
+    def process_request(self, request):
+        request.__class__.page = get_page

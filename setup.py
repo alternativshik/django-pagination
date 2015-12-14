@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Copyright (c) 2008, Eric Florenzano
 # Copyright (c) 2010, 2011 Linaro Limited
+# Copyright (c) 2015 Serhii Maltsev
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,16 +34,16 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='linaro-django-pagination',
+    name='alter-django-pagination',
     # Magic version handling with versiontools
-    version=":versiontools:linaro_django_pagination:__version__",
-    author='Zygmunt Krynicki',
-    author_email='zygmunt.krynicki@linaro.org',
-    description="linaro-django-pagination",
+    version=":versiontools:alter_django_pagination:__version__",
+    author='Serhii Maltsev',
+    author_email='alternativshik@gmail.com',
+    description="alter-django-pagination",
     long_description=open("README").read(),
     keywords='pagination,django',
     url='https://github.com/zyga/django-pagination',
-    test_suite='linaro_django_pagination.test_project.tests.run_tests',
+    test_suite='alter_django_pagination.test_project.tests.run_tests',
     license='BSD',
     packages=find_packages(),
     classifiers=[
