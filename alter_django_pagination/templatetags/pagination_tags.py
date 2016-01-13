@@ -53,7 +53,7 @@ from django.template.loader import select_template
 from django.utils.text import unescape_string_literal
 
 # TODO, import this normally later on
-from linaro_django_pagination.settings import *
+from alter_django_pagination.settings import *
 
 
 def do_autopaginate(parser, token):
