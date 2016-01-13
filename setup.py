@@ -47,7 +47,7 @@ setup(
     license='BSD',
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 5 - Beta",
+        "Development Status :: 6 - Beta",
         "Environment :: Web Environment",
         "Framework :: Django",
         "Intended Audience :: Developers",
